@@ -179,7 +179,7 @@ Public Class ConGoleiro
     End Sub
 
     Private Sub btnExcluir_Click(sender As Object, e As EventArgs) Handles btnExcluir.Click
-        If MessageBox.Show("Realmente deseja exluir o jogador?", "My Application",
+        If MessageBox.Show("Realmente deseja exluir o jogador?", "",
         MessageBoxButtons.YesNo, MessageBoxIcon.Question) _
         = DialogResult.Yes Then
             Using cn As SqlConnection = conexao()
