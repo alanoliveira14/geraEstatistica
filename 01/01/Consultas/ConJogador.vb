@@ -224,8 +224,20 @@ Public Class ConJogador
         End Using
     End Sub
 
-    Private Sub btnRating_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        RatingFIFA.codJogador = cod
-        RatingFIFA.Show()
+    Private Sub btnExcluir_Click(sender As Object, e As EventArgs) Handles btnExcluir.Click
+        If MessageBox.Show("Realmente deseja exluir o jogador?", "My Application",
+         MessageBoxButtons.YesNo, MessageBoxIcon.Question) _
+         = DialogResult.Yes Then
+            Using cn As SqlConnection = conexao()
+                cn.Open()
+                Dim sql As String = "update jogador set ativo = 0 where codJogador = " & cod & " "
+                Dim cmd As SqlCommand = New SqlCommand(sql, cn)
+                cmd.ExecuteNonQuery()
+                MessageBox.Show("Jogador exluído com sucesso!")
+                cn.Close()
+            End Using
+        End If
+
+
     End Sub
 End Class

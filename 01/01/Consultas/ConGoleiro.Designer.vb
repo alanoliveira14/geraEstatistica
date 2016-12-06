@@ -63,6 +63,7 @@ Partial Class ConGoleiro
         Me.txtCGSofridos = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.btnAtualizar = New System.Windows.Forms.Button()
+        Me.btnExcluir = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -422,7 +423,7 @@ Partial Class ConGoleiro
         Me.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnFechar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFechar.ForeColor = System.Drawing.Color.Black
-        Me.btnFechar.Location = New System.Drawing.Point(654, 283)
+        Me.btnFechar.Location = New System.Drawing.Point(719, 282)
         Me.btnFechar.Name = "btnFechar"
         Me.btnFechar.Size = New System.Drawing.Size(93, 67)
         Me.btnFechar.TabIndex = 161
@@ -490,12 +491,23 @@ Partial Class ConGoleiro
         '
         Me.btnAtualizar.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnAtualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAtualizar.Location = New System.Drawing.Point(555, 283)
+        Me.btnAtualizar.Location = New System.Drawing.Point(620, 282)
         Me.btnAtualizar.Name = "btnAtualizar"
         Me.btnAtualizar.Size = New System.Drawing.Size(93, 67)
         Me.btnAtualizar.TabIndex = 168
         Me.btnAtualizar.Text = "Atualizar Dados"
         Me.btnAtualizar.UseVisualStyleBackColor = False
+        '
+        'btnExcluir
+        '
+        Me.btnExcluir.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnExcluir.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExcluir.Location = New System.Drawing.Point(521, 281)
+        Me.btnExcluir.Name = "btnExcluir"
+        Me.btnExcluir.Size = New System.Drawing.Size(93, 67)
+        Me.btnExcluir.TabIndex = 169
+        Me.btnExcluir.Text = "Excluir"
+        Me.btnExcluir.UseVisualStyleBackColor = False
         '
         'ConGoleiro
         '
@@ -504,6 +516,7 @@ Partial Class ConGoleiro
         Me.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(827, 361)
+        Me.Controls.Add(Me.btnExcluir)
         Me.Controls.Add(Me.btnAtualizar)
         Me.Controls.Add(Me.txtCGSofridos)
         Me.Controls.Add(Me.Label15)
@@ -595,4 +608,5 @@ Partial Class ConGoleiro
     Friend WithEvents txtCGSofridos As System.Windows.Forms.TextBox
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents btnAtualizar As System.Windows.Forms.Button
+    Friend WithEvents btnExcluir As Button
 End Class

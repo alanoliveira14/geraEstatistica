@@ -70,6 +70,7 @@ Partial Class ConJogador
         Me.txtClube = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.cmbClube = New System.Windows.Forms.ComboBox()
+        Me.btnExcluir = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -513,12 +514,24 @@ Partial Class ConJogador
         Me.cmbClube.Size = New System.Drawing.Size(125, 21)
         Me.cmbClube.TabIndex = 119
         '
+        'btnExcluir
+        '
+        Me.btnExcluir.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnExcluir.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExcluir.Location = New System.Drawing.Point(509, 306)
+        Me.btnExcluir.Name = "btnExcluir"
+        Me.btnExcluir.Size = New System.Drawing.Size(93, 67)
+        Me.btnExcluir.TabIndex = 120
+        Me.btnExcluir.Text = "Excluir"
+        Me.btnExcluir.UseVisualStyleBackColor = False
+        '
         'ConJogador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.ClientSize = New System.Drawing.Size(833, 396)
+        Me.Controls.Add(Me.btnExcluir)
         Me.Controls.Add(Me.cmbClube)
         Me.Controls.Add(Me.txtClube)
         Me.Controls.Add(Me.Label13)
@@ -624,4 +637,5 @@ Partial Class ConJogador
     Friend WithEvents txtClube As System.Windows.Forms.TextBox
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents cmbClube As System.Windows.Forms.ComboBox
+    Friend WithEvents btnExcluir As Button
 End Class

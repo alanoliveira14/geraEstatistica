@@ -19,7 +19,7 @@ Public Class Consulta
                     .Connection = cn
                     .CommandTimeout = 0
                     '.CommandText = "select codJogador as 'Código do Jogador', apelido as 'Nome do Jogador', clube as 'Clube do Jogador' from jogador where apelido like '%" & txtNome.Text & "%' and codPosicao >=2"
-                    .CommandText = "select codJogador as 'Código do Jogador', apelido as 'Nome do Jogador', alcunha as 'Clube do Jogador' from jogador inner join clube on clube.codClube = jogador.codClube and  apelido like '%" & txtNome.Text & "%' where codPosicao>=2 order by clube.alcunha asc"
+                    .CommandText = "select codJogador as 'Código do Jogador', apelido as 'Nome do Jogador', alcunha as 'Clube do Jogador' from jogador inner join clube on clube.codClube = jogador.codClube and  apelido like '%" & txtNome.Text & "%' where codPosicao>=2 and ativo = 1 order by clube.alcunha asc"
                     .CommandType = CommandType.Text
                 End With
 
@@ -35,7 +35,7 @@ Public Class Consulta
                 With cmd
                     .Connection = cn
                     .CommandTimeout = 0
-                    .CommandText = "select codJogador as 'Código do Goleiro', apelido as 'Nome do Goleiro' from jogador where apelido like '%" & txtNome.Text & "%' and codPosicao = 1"
+                    .CommandText = "select codJogador as 'Código do Goleiro', apelido as 'Nome do Goleiro' from jogador where apelido like '%" & txtNome.Text & "%' and codPosicao = 1 and ativo = 1"
                     .CommandType = CommandType.Text
                 End With
             End If
